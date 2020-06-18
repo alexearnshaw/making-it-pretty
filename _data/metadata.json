@@ -1,15 +1,15 @@
 {
-  "title": "Your Blog Name",
+  "title": "Making it pretty",
   "url": "https://myurl.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "Musings and learnings from a technical writer who does more than just making docs pretty!",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Musings and learnings from a technical writer who does more than just making docs pretty!",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://myurl.com/"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com"
+    "name": "Alex Earnshaw",
+    "email": "alex.earnshaw+blog@gmail.com"
   }
 }
