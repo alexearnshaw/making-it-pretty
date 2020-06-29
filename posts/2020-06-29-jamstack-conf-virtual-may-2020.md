@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 title: Jamstack conf virtual May 2020
 description: My first virtual conference!
-date: 2020-06-28T23:00:00.000Z
+date: 2020-05-27T23:00:00.000Z
 featuredImage: /images/uploads/banner.png
 ---
 This week I attended my first ever virtual conference. I had fairly low expectations as I really didn't expect a virtual conference to come anywhere close to the experience of an in-person live conference. But I was very pleasantly surprised!
