@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: alexearnshaw/making-it-pretty # Path to your GitHub repository
   branch: master # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: "_site/images/uploads"
