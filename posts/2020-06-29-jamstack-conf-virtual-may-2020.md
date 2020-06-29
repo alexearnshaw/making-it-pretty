@@ -7,8 +7,6 @@ featuredImage: /images/uploads/banner.png
 ---
 This week I attended my first ever virtual conference. I had fairly low expectations as I really didn't expect a virtual conference to come anywhere close to the experience of an in-person live conference. But I was very pleasantly surprised!
 
-
-
 The Jamstack conference was hosted on a platform called [Hopin](https://hopin.to/) and I have to say this platform was just outstanding. It handled over 3000 attendees without a hitch and provides live chat facilities, a stage for the main conference speakers, breakout areas for exhibitor booths and for live Q&A sessions, and a networking area where you can have a 3 minute video call with another random attendee (the equivalent of meeting in the hallway!).
 
 ![](/images/uploads/harperreed.png)
@@ -51,7 +49,7 @@ This was from one of the volunteers on the Covid tracking project. I will defini
 
 
 
-All in all it was a really cool virtual conference and I really enjoyed it. I won't hesitate to attend another virtual conference.
+All in all it was a really cool virtual conference and I really enjoyed it. I won't hesitate to attend another virtual conference 👏
 
 
 
