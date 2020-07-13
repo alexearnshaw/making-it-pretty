@@ -1,9 +1,11 @@
 const precss = require('precss');
 const autoprefixer = require('autoprefixer');
+const path = require('path');
 module.exports = {
   entry: './_assets/js/app.js',
   output: {
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, "_site"),  
+    filename: './assets/bundle.js', /*put output in eleventy site dir*/
   },
   module: {
     rules: [{
