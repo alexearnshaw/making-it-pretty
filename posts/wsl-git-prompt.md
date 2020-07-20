@@ -1,45 +1,100 @@
 ---
-title: Customize your Git prompt on WSL
-description: An easy way to add git branch and git status to WSL Ubuntu
+title: Customize your Git prompt
+description: An easy way to add git branch and git status to WSL Ubuntu or MacOS
 date: 2020-06-29
 tags:
   - wsl
+  - macOS
 layout: layouts/post.njk
-featuredImage: /images/uploads/ali2019.JPG
 ---
 
-If you've ever used Gitbash on Windows but are now using Git in an Ubuntu terminal under Windows Subsystem for Linux, you're probably missing the nice prompt that you had in Gitbash! In this post I'm going to show you an easy way to add the Git branch name and the state of your branch using the official Git script.
+If you've ever used Gitbash on Windows but are now using Git in an Ubuntu terminal under Windows Subsystem for Linux (WSL), or in the MacOS terminal, you're probably missing the nice prompt that you had in Gitbash! In this post I'm going to show you an easy way to add the Git branch name and the state of your branch using the `git-prompt.sh` script from the official Git project.
 
 ## Download the Git script
 
-Download the file [`git-prompt.sh`](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) and save it to your `Documents` directory on Windows. To download the file, right-click the **Raw** button at the top of the file and select **Save link as...**, and then open the file to check that it contains only the raw text and not HTML.
+Download the file [`git-prompt.sh`](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) and save it to your `Documents` directory on Windows or your user home directory on MacOS.
 
-1. Download the file [`git-prompt.sh`](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) and save it to your `Documents` directory on Windows. To download the file, right-click the **Raw** button at the top of the file and select **Save link as...**, and then open the file to check that it contains only the raw text and not HTML.
-2. Open an Ubuntu WSL window.
-3. Copy the `git-prompt.sh` file to the home directory in your Ubuntu file system and rename it as `.git-prompt.sh`:
+To download the file, right-click the **Raw** button at the top of the file and select **Save link as...**. This ensures that the file contains only the raw text and not HTML.
 
-    ```
-    cd ~
-    cp /mnt/c/Users/WINDOWS_USERNAME/Documents/git-prompt.sh .git-prompt.sh
-    ```
+Tip: To save the file to your WSL Ubuntu home directoy, save it to your `Documents` directory on Windows first and then move it to your Ubuntu home directory in your WSL terminal:
 
-4. Launch Visual Studio Code from Ubuntu:
+```
+mv /mnt/c/Users/WINDOWS_USERNAME/Documents/git-prompt.sh ~/
+```
 
-    ```
-    code .
-    ```
+## Rename the file
 
-5. Open the file `.bashrc` in VSCode. This file already exists in your Ubuntu home directory and is run each time you open an Ubuntu window to initialize your shell environment.
-6. Paste the following lines at the end of the file:
+Rename the file as `.git-prompt.sh`:
 
-    ```
-    if [ -f ~/.git-prompt.sh ]; then
-        source ~/.git-prompt.sh
-        export GIT_PS1_SHOWDIRTYSTATE=1
-        export PS1='\u@\h \[\033[38;5;11m\]\w\[\033[38;5;14m\]$(__git_ps1 " (%s)")\[\033[00m\]$ '
-    fi
-    ```
+```
+cd ~
+mv git-prompt.sh .git-prompt.sh
+```
 
-7. Close the current Ubuntu WSL window and open a new one. This forces Ubuntu to load the changes in `.bashrc`.
+## Edit `.bashrc` or `.zshrc` file
 
-After completing these steps, the command prompt in Ubuntu shows useful information such as the current Git branch, the status of the working directory, and so on.
+
+Open the file `.bashrc` or `.zshrc` in an editor. This file already exists in your home directory and is run each time you open a terminal window to initialize your shell environment.
+
+Paste the following lines at the end of the file.
+
+If you are using `bash`:
+
+```
+if [ -f ~/.git-prompt.sh ]; then
+    source ~/.git-prompt.sh
+    export GIT_PS1_SHOWDIRTYSTATE=1
+    export PS1='\u@\h \[\033[38;5;11m\]\w\[\033[38;5;14m\]$(__git_ps1 " (%s)")\[\033[00m\]$ '
+fi
+```
+
+If you are using `zsh`:
+
+```
+if [ -f ~/.git-prompt.sh ]; then
+    source ~/.git-prompt.sh
+    export GIT_PS1_SHOWDIRTYSTATE=1
+    setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
+fi
+```
+
+## Source `.bashrc` or `.zshrc`
+
+Enter the following command to apply the changes in your current terminal:
+
+```
+source ~/.bashrc
+```
+
+Or for `zsh`:
+
+```
+source ~/.zshrc
+```
+
+Alternatively, you can close the current terminal window and open a new one to force the terminal to load the changes.
+
+## Here's our nice prompt!
+
+After completing these steps, the command prompt shows useful information such as the current Git branch, the status of the branch, and so on.
+
+Prompt when not in a Git folder:
+
+```
+[alexearnshaw@Alexs-MacBook-Air ~]$ 
+
+```
+
+Prompt when in a Git folder on the master branch:
+
+```
+[alexearnshaw@Alexs-MacBook-Air ~]$ cd docsy
+[alexearnshaw@Alexs-MacBook-Air docsy (master)]$ 
+```
+
+Prompt when in a Git folder on a feature branch with unstaged changes:
+
+```
+[alexearnshaw@Alexs-MacBook-Air ~]$ cd making-it-pretty
+[alexearnshaw@Alexs-MacBook-Air making-it-pretty (postswip *)]$ 
+```
