@@ -18,7 +18,7 @@ To download the file, right-click the **Raw** button at the top of the file and 
 
 Tip: To save the file to your WSL Ubuntu home directoy, save it to your `Documents` directory on Windows first and then move it to your Ubuntu home directory in your WSL terminal:
 
-```
+``` bash
 mv /mnt/c/Users/WINDOWS_USERNAME/Documents/git-prompt.sh ~/
 ```
 
@@ -26,7 +26,7 @@ mv /mnt/c/Users/WINDOWS_USERNAME/Documents/git-prompt.sh ~/
 
 Rename the file as `.git-prompt.sh`:
 
-```
+``` bash
 cd ~
 mv git-prompt.sh .git-prompt.sh
 ```
@@ -40,7 +40,7 @@ Paste the following lines at the end of the file.
 
 If you are using `bash`:
 
-```
+``` bash
 if [ -f ~/.git-prompt.sh ]; then
     source ~/.git-prompt.sh
     export GIT_PS1_SHOWDIRTYSTATE=1
@@ -50,7 +50,7 @@ fi
 
 If you are using `zsh`:
 
-```
+``` bash
 if [ -f ~/.git-prompt.sh ]; then
     source ~/.git-prompt.sh
     export GIT_PS1_SHOWDIRTYSTATE=1
@@ -62,13 +62,13 @@ fi
 
 Enter the following command to apply the changes in your current terminal:
 
-```
+``` bash
 source ~/.bashrc
 ```
 
 Or for `zsh`:
 
-```
+``` bash
 source ~/.zshrc
 ```
 
@@ -80,21 +80,21 @@ After completing these steps, the command prompt shows useful information such a
 
 Prompt when not in a Git folder:
 
-```
+``` bash
 [alexearnshaw@Alexs-MacBook-Air ~]$ 
 
 ```
 
 Prompt when in a Git folder on the master branch:
 
-```
+``` bash
 [alexearnshaw@Alexs-MacBook-Air ~]$ cd docsy
 [alexearnshaw@Alexs-MacBook-Air docsy (master)]$ 
 ```
 
 Prompt when in a Git folder on a feature branch with unstaged changes:
 
-```
+``` bash
 [alexearnshaw@Alexs-MacBook-Air ~]$ cd making-it-pretty
 [alexearnshaw@Alexs-MacBook-Air making-it-pretty (postswip *)]$ 
 ```
