@@ -1,3 +1,4 @@
+# Default build settings. Use npm run build to run production scripts and npm run start to run development scripts
 [build]
   publish = "_site"
   command = "npm run build"
