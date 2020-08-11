@@ -9,7 +9,7 @@ This week I attended my first ever virtual conference. I had fairly low expectat
 
 The Jamstack conference was hosted on a platform called [Hopin](https://hopin.to/) and I have to say this platform was just outstanding. It handled over 3000 attendees without a hitch and provides live chat facilities, a stage for the main conference speakers, breakout areas for exhibitor booths and for live Q&A sessions, and a networking area where you can have a 3 minute video call with another random attendee (the equivalent of meeting in the hallway!).
 
-![](/images/uploads/harperreed.png)
+![Harper Reed](/images/uploads/harperreed.png){.img-fluid}
 
 
 
@@ -35,7 +35,7 @@ The Jamstack is a stack for modern web development, involving Javascript, APIs, 
 * I was amazed at the sheer amount and types of websites that are developed using the Jamstack. For example, did you know that the Obama presidential campaign raised $250m dollars using a Jamstack website, or that the [Covid-19 tracking project](https://covidtracking.com/) is also a Jamstack site that now serves millions of users per day?
 * The most interesting talk for me was a presentation of results from a survey of over 3000 Jamstack users. In this survey I learned how the tools we're using for our current docs-as-code implementation compare to the other tools available in terms of popularity and satisfaction.
 
-![](/images/uploads/2020-05-27_15-00-08.png)
+![Jamstack tools survey](/images/uploads/2020-05-27_15-00-08.png){.img-fluid}
 
 
 
@@ -43,7 +43,7 @@ The takeaway quote for me was this one:
 
 > Today we make it work. Tomorrow we make it look pretty.
 
-![](/images/uploads/covid19.png)
+![Covid project quote](/images/uploads/covid19.png){.img-fluid}
 
 This was from one of the volunteers on the Covid tracking project. I will definitely try to apply this to my work from now on as I often find that we spend a lot of time discussing and sharing opinions on how something looks, when all users really want is something that works!
 
