@@ -39,17 +39,6 @@
     <!-- Current page: {{ page.url | url }} -->
 
     </div>
-    <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-    </script>
     <!--Use the assets that webpack generates instead of stylesheets etc-->
     <script src="/assets/bundle.js"></script>
   </body>
