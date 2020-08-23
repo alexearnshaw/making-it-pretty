@@ -3,7 +3,7 @@ backend:
   repo: alexearnshaw/making-it-pretty # Path to your GitHub repository
   branch: master # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
-media_folder: "images/uploads"
+media_folder: "images/uploads" # the path to the images before the site is built
 public_folder: "/images/uploads" # the path to the images when the site is built and in _site
 collections:
  - name: "posts"        #The name of the collection and should match our posts.json file's tag
