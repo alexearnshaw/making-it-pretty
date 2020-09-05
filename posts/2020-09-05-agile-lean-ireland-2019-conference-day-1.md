@@ -43,7 +43,7 @@ All attendees also received a free hard copy of Barry's book "Unlearn", which is
 
 This talk by John Cutler (product manager/evangelist) discussed what your team can do to rise up out of, and beyond, the feature factory! It included some great ideas and 6 hacks.
 
-![John Cutler](/images/uploads/jcutler.png)
+![John Cutler](/images/uploads/jcutler.png){.img-fluid}
 
 ## Lightning talks
 
